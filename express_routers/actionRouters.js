@@ -3,7 +3,7 @@ const actionsMethods = require("../data/helpers/actionModel")
 const router = express.Router();
 
 router.get("/", (request, response) => {
-    actionMethods.get()
+    actionsMethods.get()
         .then(actions => {
             response.status(200).json({data: actions})
         })
@@ -15,7 +15,7 @@ router.get("/", (request, response) => {
 
 router.get("/:id", (request, response) => {
     const { id } = request.params;
-    actionMethods.get(id)
+    actionsMethods.get(id)
         .then(action => {
             response.status(200).json({data: action})
         })
