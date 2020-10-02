@@ -9,7 +9,7 @@ server.use("/projects", projectRouter);
 
 
 server.get("/", (request, response) => {
-    response.status(200).json({Anakin: "It's working! It's working!"})
+    response.status(200).json({ Anakin: "It's working! It's working!" })
 })
 
 module.exports = server;
